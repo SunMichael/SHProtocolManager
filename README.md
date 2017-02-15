@@ -39,10 +39,11 @@ Directory1/**/*.h
 
 
 
-3.1.绑定tag      
+3.1.绑定tag     
+<pre><code>
 git commit -m 'log'
 git tag 0.0.1    tag一定要和podspec中的version一致
-git push origin master --tags       –tags为了把刚才添加的tag提交上去
+git push origin master --tags       –tags为了把刚才添加的tag提交上去</code></pre>   
 
 
 
