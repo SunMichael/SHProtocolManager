@@ -2,8 +2,8 @@
 
 ###建立自己的Podspec     
 
-1.添加开源许可FILE_LICENSE文件    
-$ echo MIT>FILE_LICENSE
+1.添加开源许可LICENSE文件    
+$ echo MIT>LICENSE
 
 2.在自己的项目下创建podspec文件     
 $ pod spec create SHProtocolManager          
