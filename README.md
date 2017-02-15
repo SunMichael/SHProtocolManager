@@ -6,10 +6,11 @@
 $ echo MIT>FILE_LICENSE
 
 2.在自己的项目下创建podspec文件     
-$ pod spec create SHProtocolManager    
+$ pod spec create SHProtocolManager          
 
-3.编辑podspec文件内，例如下:      
-Pod::Spec.new do |s|
+3.编辑podspec文件内，例如下:          
+
+<pre><code>Pod::Spec.new do |s|
     s.name         = "SHProtocolManager"
     s.version      = "0.0.1"
     s.ios.deployment_target = '8.0'
@@ -22,14 +23,28 @@ Pod::Spec.new do |s|
     s.source_files  = "SHProtocolManager/*"
     s.resources          = "SHProtocolManager/*"
     s.requires_arc = true
-end    
+end </code></pre>            
 
-"Directory1/*"
-"Directory1/Directory2/*.{h,m}"
-"Directory1/**/*.h"
-“*” 表示匹配所有文件
-“*.{h,m}” 表示匹配所有以.h和.m结尾的文件
-“**” 表示匹配所有子目录
+
+
+
+<pre><code>
+Directory1/*
+Directory1/Directory2/*.{h,m}
+Directory1/**/*.h        
+* 表示匹配所有文件
+*.{h,m} 表示匹配所有以.h和.m结尾的文件
+** 表示匹配所有子目录 </code></pre>         
+
+
+
+
+3.1.绑定tag      
+git commit -m 'log'
+git tag 0.0.1    tag一定要和podspec中的version一致
+git push origin master --tags       –tags为了把刚才添加的tag提交上去
+
+
 
 4.验证文件的有效性     
 $ pod spec lint LPPushService.podspec    
@@ -45,3 +60,5 @@ $ pod trunk register bigsun1992@sina.cn "SunXX"
 6.发布podsepc    
 pod trunk push LPPushService.podspec    
 或者pod trunk push LPPushService.podspec --use-libraries --allow-warnings
+
+
