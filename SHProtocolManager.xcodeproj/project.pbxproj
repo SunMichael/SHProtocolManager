@@ -13,8 +13,8 @@
 		047431161E5402E700D1AADB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0474310B1E5402E700D1AADB /* Main.storyboard */; };
 		047431171E5402E700D1AADB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0474310D1E5402E700D1AADB /* Info.plist */; };
 		047431181E5402E700D1AADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0474310E1E5402E700D1AADB /* main.m */; };
-		047431191E5402E700D1AADB /* SHProtocolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 047431101E5402E700D1AADB /* SHProtocolManager.m */; };
 		0474311A1E5402E700D1AADB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047431121E5402E700D1AADB /* ViewController.m */; };
+		047431451E5549AE00D1AADB /* SHProtocolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 047431441E5549AE00D1AADB /* SHProtocolManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +26,10 @@
 		0474310C1E5402E700D1AADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0474310D1E5402E700D1AADB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0474310E1E5402E700D1AADB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0474310F1E5402E700D1AADB /* SHProtocolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHProtocolManager.h; sourceTree = "<group>"; };
-		047431101E5402E700D1AADB /* SHProtocolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHProtocolManager.m; sourceTree = "<group>"; };
 		047431111E5402E700D1AADB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		047431121E5402E700D1AADB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		047431431E5549AE00D1AADB /* SHProtocolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHProtocolManager.h; sourceTree = "<group>"; };
+		047431441E5549AE00D1AADB /* SHProtocolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHProtocolManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +62,7 @@
 		047431051E5402E700D1AADB /* SHProtocolManager */ = {
 			isa = PBXGroup;
 			children = (
+				047431421E5549AE00D1AADB /* ProtocolManager */,
 				047431061E5402E700D1AADB /* AppDelegate.h */,
 				047431071E5402E700D1AADB /* AppDelegate.m */,
 				047431081E5402E700D1AADB /* Assets.xcassets */,
@@ -69,12 +70,19 @@
 				0474310B1E5402E700D1AADB /* Main.storyboard */,
 				0474310D1E5402E700D1AADB /* Info.plist */,
 				0474310E1E5402E700D1AADB /* main.m */,
-				0474310F1E5402E700D1AADB /* SHProtocolManager.h */,
-				047431101E5402E700D1AADB /* SHProtocolManager.m */,
 				047431111E5402E700D1AADB /* ViewController.h */,
 				047431121E5402E700D1AADB /* ViewController.m */,
 			);
 			path = SHProtocolManager;
+			sourceTree = "<group>";
+		};
+		047431421E5549AE00D1AADB /* ProtocolManager */ = {
+			isa = PBXGroup;
+			children = (
+				047431431E5549AE00D1AADB /* SHProtocolManager.h */,
+				047431441E5549AE00D1AADB /* SHProtocolManager.m */,
+			);
+			path = ProtocolManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				047431191E5402E700D1AADB /* SHProtocolManager.m in Sources */,
 				047431181E5402E700D1AADB /* main.m in Sources */,
 				0474311A1E5402E700D1AADB /* ViewController.m in Sources */,
+				047431451E5549AE00D1AADB /* SHProtocolManager.m in Sources */,
 				047431131E5402E700D1AADB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
