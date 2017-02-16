@@ -58,7 +58,7 @@ sudo gem install cocoapods --pre
 $ pod trunk register bigsun1992@sina.cn "SunXX"   
 
 
-6.发布podsepc    
+6.发布podspec    
 pod trunk push LPPushService.podspec    
 或者pod trunk push LPPushService.podspec --use-libraries --allow-warnings
 
