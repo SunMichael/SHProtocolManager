@@ -20,8 +20,7 @@ $ pod spec create SHProtocolManager
     s.author             = { "sunsun" => "bigsun1992@sina.cn" }
     s.social_media_url   = "https://github.com/SunMichael"
     s.source       = { :git => "https://github.com/SunMichael/SHProtocolManager.git", :tag => s.version }
-    s.source_files  = "SHProtocolManager/*"
-    s.resources          = "SHProtocolManager/*"
+    s.source_files  = "SHProtocolManager/ProtocolManager/**/*.{h,m}"
     s.requires_arc = true
 end </code></pre>            
 
