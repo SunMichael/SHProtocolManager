@@ -14,7 +14,7 @@ $ pod spec create SHProtocolManager
     s.name         = "SHProtocolManager"
     s.version      = "0.0.1"
     s.ios.deployment_target = '8.0'
-    s.summary      = "A delightful setting interface framework."
+    s.summary      = "A test framework."
     s.homepage     = "https://github.com/SunMichael/SHProtocolManager"
     s.license              = { :type => "MIT", :file => "LICENSE" }
     s.author             = { "sunsun" => "bigsun1992@sina.cn" }
