@@ -46,7 +46,7 @@ git tag 0.0.1    tag一定要和podspec中的version一致
 git push origin master --tags       –tags为了把刚才添加的tag提交上去</code></pre>   
 
 git tag -d 0.0.1   //删除本地tag      
-git push origin --delete tag 0.0.1  //删除远程仓库里的tag     
+git push origin --delete tag 0.0.1  //删除远程仓库里的tag     </code></pre>  
 
 
 4.验证文件的有效性     
