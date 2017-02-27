@@ -49,7 +49,6 @@ git push origin --delete tag 0.0.1  //删除远程仓库里的tag     </code></p
 
 
 4.验证文件的有效性
-
 $ pod spec lint LPPushService.podspec    
 如果出现- ERROR | [iOS] unknown: Encountered an unknown error (Simulator iPhone 4s is not available.) during validation.    
 更新cocoapad
