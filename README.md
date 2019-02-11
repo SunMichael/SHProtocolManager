@@ -24,6 +24,8 @@ $ pod spec create SHProtocolManager
     s.requires_arc = true
 end </code></pre>            
 
+ 注意文件中 s.source_files 绝对路径  以及 s.frameworks 等的编写不能错  
+
 
 
 
@@ -40,27 +42,43 @@ Directory1/**/*.h
 
 3.1.绑定tag     
 <pre><code>
-git commit -m 'log'
-git tag 0.0.1    tag一定要和podspec中的version一致
+git tag -m "message" "0.0.1"     tag一定要和podspec中的version一致
 git push origin master --tags       –tags为了把刚才添加的tag提交上去   
 
 git tag -d 0.0.1   //删除本地tag      
 git push origin --delete tag 0.0.1  //删除远程仓库里的tag     </code></pre>  
-
-
-4.验证文件的有效性           
-<pre><code>$ pod spec lint LPPushService.podspec       </code></pre>  
+               
+  
+3.验证文件的有效性      
+  pod lib lint --verbose    
+  如果出现ERROR | [iOS] unknown: Encountered an unknown error (Malformed version number string ) during validation.
+   https://github.com/CocoaPods/CocoaPods/issues/8240 [closed] [15 comments]
+   03 Nov 2018
+ 检查下gem的版本 使用2.7.6  gem update --system 2.7.6
+ 
+ <pre><code>$ pod spec lint LPPushService.podspec       </code></pre>  
 如果出现- ERROR | [iOS] unknown: Encountered an unknown error (Simulator iPhone 4s is not available.) during validation.    
 更新cocoapad
-sudo gem install cocoapods --pre
+sudo gem install cocoapods --pre 
 
+5.添加repo，会将remote的项目clone 到本地cocoapods目录中     
+  pod repo add SHProtocolManager https://github.com/SunMichael/SHProtocolManager.git    
 
-5.注册cocoapod       
-$ pod trunk register bigsun1992@sina.cn "SunXX"   
+6.上传podspec到 SHProtocolManager仓库下    
+  pod repo push SHProtocolManager SHProtocolManager.podspec    
+  
+7.上传podspec到cocoapods官方     
+如果没有注册过账号，需要使用邮箱注册     
+  pod trunk register bigsun1992@sina.cn    
 
+验证通过后就可以上传了    
+  pod trunk push SHProtocolManager.podspec    
 
-6.发布podspec    
-<pre><code>pod trunk push LPPushService.podspec    
-或者pod trunk push LPPushService.podspec --use-libraries --allow-warnings       </code></pre>  
+8.搜索库     
+pod setup    
+pod search SHProtocolManager    
 
+9.查询自己的库     
+pod trunk me
+  
 
