@@ -1,6 +1,6 @@
 # SHProtocolManager
 
-###建立自己的Podspec     
+### 建立自己的Pod库 
 
 1.添加开源许可LICENSE文件    
 $ echo MIT>LICENSE
